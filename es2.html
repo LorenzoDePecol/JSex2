@@ -4,7 +4,7 @@
   </head>
   <body id="body1">
     <h1>Es1</h1>
-    <h1>bella</h1>
+    <h1 id="h1bella">bella</h1>
     <p>
       Pagina html statica, includi un file javascript, aggiungi un bottone,
       aggiungi un click listener al bottone che cambia il contenuto di un tag
@@ -20,12 +20,28 @@
 
     <br /><br />
 
-    <script src="es2.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
       console.log($("h1")[1]);
       $("#h1bella").html("ciaone");
       console.log($("#h1bella")[0].innerHTML);
+
+      var addBtn = function(){
+      var btn = document.createElement("button");
+      btn.innerHTML = "NON CLICCARE";
+  
+      document.getElementById("body1").append(btn);
+  
+      btn.addEventListener("click", changeColor);
+      }
+
+      var changeColor = function () {
+        $("#span1").html("CUCU");
+        $("#div1").html("<h1>TI AVEVO DETTO DI NON CLICCARE MALEDETTO</h1>");
+        $("#div1").attr("style", "background-color:   rgb(163, 36, 68)");
+      }
+
+      document.addEventListener("DOMContentLoaded", addBtn);
     </script>
   </body>
 </html>
