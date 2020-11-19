@@ -1,14 +1,12 @@
 <html>
   <head>
-    <title>Excercise 1 training</title>
+    <title>Excercise 2 training</title>
   </head>
   <body id="body1">
     <h1>Es1</h1>
     <h1 id="h1bella">bella</h1>
     <p>
-      Pagina html statica, includi un file javascript, aggiungi un bottone,
-      aggiungi un click listener al bottone che cambia il contenuto di un tag
-      span e il contenuto e colore di un div.
+      Pagina html statica, replica es1 con JQuery
     </p>
     
     <span id="span1">C'è un bottone:</span>
@@ -36,6 +34,7 @@
       }
 
       var changeColor = function () {
+        $("body").append($("<h3>caccola</h3>"));
         $("#span1").html("CUCU");
         $("#div1").html("<h1>TI AVEVO DETTO DI NON CLICCARE MALEDETTO</h1>");
         $("#div1").attr("style", "background-color:   rgb(163, 36, 68)");
